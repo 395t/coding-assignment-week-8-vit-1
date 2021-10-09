@@ -11,6 +11,7 @@ The Data-efficient image Transformers (DeiT) paper introduces improvements upon 
 DeiT Performance | '
 :-|-:
 ![DeiT Accuracy](imgs/DeiTLoss.png)  | ![DeiT Loss](imgs/DeiTLoss.png) 
+
 ![DeiT Model Accuracies](imgs/DeiTModelAccuraciesBar.png) 
 
 When performing the fine-tuning experiments in the paper, the authors fine-tuned for 300 epochs compared to the 20 epochs performed here. Despite training for such a short number of epochs, the DeiT models were able to reach high accuracies across all tasks. The distilled models consistently perform better than the base models, showing accuracies around .3-.5% better across the board. Perhaps this gap would be wider had we trained using one of the larger DeiT architectures or fine-tuned over more epochs.
