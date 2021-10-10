@@ -66,6 +66,27 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 :-|-:
 ![LeVit test accuracy for 20 epochs](imgs/testAcc-bw-datasets-Levit256.png)  | ![LeVit test accuracy for 70 epochs](imgs/testAcc-bw-datasets-Levit384.png)
 
+## Table comparing various LeVit models (trained for 70 epochs)
+
+| Models | Train Loss | Test Loss | Train time(in min) | Test time(in min) | Test Acc@1 | Test Acc@5 |  
+|---|---|---|---|---|---|---|
+|  LeVit-128 (Cifar-10) | 1.931 | 0.828 | 428.807 | 238.621 | 73.825 | 98.311 |
+|  LeVit-128s (Cifar-10) | 1.761 | 0.682 | 249.963 | 73.316 | 75.586 | 99.219 |
+|  LeVit-192 (Cifar-10) | 1.888 | 0.845 | 512.539 | 242.25 | 73.336 | 98.666 |
+|  LeVit-256 (Cifar-10) | 1.678 | 0.628 | 313.23 | 59.904 | 80.989 | 99.349 |
+|  LeVit-384 (Cifar-10) | 1.713 | 0.559 | 355.34 | 60.237 | 82.031 | 99.739 |
+|  LeVit-128 (STL10) | 2.04 | 1.126 | 178.68 | 84.399 | 64.713 | 94.856 | 
+|  LeVit-128s (STL10) | 2.069 | 1.101 | 170.059 | 81.255 | 63.574 | 97.851 |
+|  LeVit-192 (STL10) | 2.32 | 1.423 | 513.478 | 277.384 | 50.589 | 94.336 |
+|  LeVit-256 (STL10) | 2.0165 | 1.119 | 170.899 | 85.664 | 65.234 | 95.898 |
+|  LeVit-384 (STL10) | 2.025 | 1.058 | 177.077| 86.285 | 68.164 | 95.703 |
+|  LeVit-128 (Caltech-101) | 2.517 | 1.956 | 211.669 | 165.241 | 52.554 | 74.086 |
+|  LeVit-128s (Caltech-101) | 2.564 | 1.853 | 194.173 | 156.433  | 57.734 | 77.574 |
+|  LeVit-192 (Caltech-101) | 2.511 | 1.759 | 206.402 | 157.154 | 59.516 | 80.929 |
+|  LeVit-256 (Caltech-101) | 2.308 | 1.831 | 204.753 | 166.664| 56.16 | 78.297 |
+|  LeVit-384 (Caltech-101) | 2.385 | 1.65 | 206.753 | 170.048 | 60.476 | 81.422  |
+
+
 ## Observations
 
 1) With increasing the epochs without much finetuning, the performance of the all the LeVit models on all the datasets have improved significantly. 
@@ -74,6 +95,8 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 4) Cifar-10 reaches an accuracy of 70 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 82 percent for 70 epochs with default parameters.
 5) STL10 reaches an accuracy of 51 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 68 percent for 79 epochs with default parameters. At around 40th epoch, there is a jump in the accuracy for SL10.
 6) Caltech-101 reaches an accuracy of 42.7 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 60.5 percent for 70 epochs with default parameters. At around the 25th epoch, there is a significant jump in the accuracy for Caltech-101.
+7) The performance of LeVit-128s is better for all the datasets with a small degradation in accuracy compared to other models. 
+8) LeVit-128/LeVit-192 takes most time to train for all datasets with accuracy lesser than LeVit-256/LeVit284.
 
 ## References
 
