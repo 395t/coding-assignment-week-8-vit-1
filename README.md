@@ -19,3 +19,49 @@ When performing the fine-tuning experiments in the paper, the authors fine-tuned
 ## References
 
 [DeiT Repository (FB Research)](https://github.com/facebookresearch/deit)
+
+# LeViT: a Vision Transformer in ConvNet’s Clothing for Faster Inference
+
+## Summary
+
+
+### LeViT
+LeVit paper utilises recent finding in attention-based architectures which are competitive on highly parallel processing hardware. LeVit outperforms existing convnets and vision transformers on the basis of speed/accuracy tradeoff. We finetuned LeVit for 20 epochs by changing various parameters like learning rate, dropout, warm restarts, batch size, etc for 20 epochs. We also trained LeVit for 70 epochs with the same parameters used for ImageNet without fine tuning. 
+Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets. 
+
+### LeViT Implementation
+Refer the readme for Levit implementation. 
+
+#### Results
+LeVit training loss for 20 epochs for Cifar-10 | LeVit training loss for 70 epochs for Cifar-10
+:-|-:
+![LeVit training loss for 20 epochs](imgs/cifar10-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/cifar10-Levit-train-loss-70epoch.png) 
+LeVit test accuracy for 20 epochs for Cifar-10 | LeVit test accuracy for 70 epochs for Cifar-10
+:-|-:
+![LeVit accuracy for 20 epochs](imgs/cifar10-Levit-test-acc.png)  | ![LeVit accuracy for 70 epochs](imgs/cifar10-Levit-test-acc-70epoch.png) 
+LeVit training loss for 20 epochs for STL10 | LeVit training loss for 70 epochs for STL10
+:-|-:
+![LeVit training loss for 20 epochs](imgs/stl10-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/stl10-Levit-train-loss-70epoch.png) 
+LeVit test accuracy for 20 epochs for STL10 | LeVit test accuracy for 70 epochs for STL10
+:-|-:
+![LeVit test accuracy for 20 epochs](imgs/stl10-Levit-test-acc.png)  | ![LeVit test accuracy for 70 epochs](imgs/stl10-Levit-test-acc-70epoch.png) 
+LeVit training loss for 20 epochs for Caltech101 | LeVit training loss for 70 epochs for Caltech101
+:-|-:
+![LeVit training loss for 20 epochs](imgs/caltech-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/caltech101-Levit-train-loss-70epoch.png) 
+LeVit test accuracy for 20 epochs for Caltech101 | LeVit test accuracy for 70 epochs for Caltech101
+:-|-:
+![LeVit test accuracy for 20 epochs](imgs/caltech-Levit-test-acc.png)  | ![LeVit test accuracy for 70 epochs](imgs/caltech101-Levit-test-acc-70epoch.png) 
+LeVit training loss for 20 epochs comparison between datasets | LeVit training loss for 70 epochs comparison between datasets
+:-|-:
+![LeVit training loss for 20 epochs](imgs/trainingLoss-bw-datasets-Levit256.png)  | ![LeVit training loss for 70 epochs](imgs/trainingLoss-bw-datasets-Levit384.png) 
+LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accuracy for 70 epochs comparison between datasets
+:-|-:
+![LeVit test accuracy for 20 epochs](imgs/testAcc-bw-datasets-Levit256.png)  | ![LeVit test accuracy for 70 epochs](imgs/testAcc-bw-datasets-Levit384.png)
+
+## Observations
+
+1) With increasing the epochs without much finetuning, the performance of the all the LeVit models on all the datasets have improved significantly. 
+
+## References
+
+[Pytorch image models]https://github.com/rwightman/pytorch-image-models
