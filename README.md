@@ -96,8 +96,8 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 2) On all the datasets, the training loss of LeVit-384 is minimum.
 3) On all the datasets, the test accuracy of LeVit-256 is highest within 20 epochs but test accuracy of LeVit-384 is highest after the initial 30-40 epochs.
 4) Cifar-10 reaches an accuracy of 70.5 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 82 percent for 70 epochs with default parameters.
-5) STL10 reaches an accuracy of 51 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 68 percent for 79 epochs with default parameters. At around 40th epoch, there is a jump in the accuracy for SL10.
-6) Caltech-101 reaches an accuracy of 42.7 percent after fine-tuning for 20 epochs whereas Cifar-10 reaches an accuracy of 60.5 percent for 70 epochs with default parameters. At around the 25th epoch, there is a significant jump in the accuracy for Caltech-101.
+5) STL10 reaches an accuracy of 51 percent after fine-tuning for 20 epochs whereas STL10 reaches an accuracy of 68 percent for 79 epochs with default parameters. At around 40th epoch, there is a jump in the accuracy for SL10.
+6) Caltech-101 reaches an accuracy of 42.7 percent after fine-tuning for 20 epochs whereas Caltech-101 reaches an accuracy of 60.5 percent for 70 epochs with default parameters. At around the 25th epoch, there is a significant jump in the accuracy for Caltech-101.
 7) The performance of LeVit-128s is better for all the datasets with a small degradation in accuracy compared to other models. 
 8) LeVit-128/LeVit-192 takes most time to train for all datasets with accuracy lesser than LeVit-256/LeVit284.
 
