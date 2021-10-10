@@ -33,27 +33,35 @@ Below we show results for training these models across the CIFAR-10, STL-10, and
 Refer the readme for Levit implementation. 
 
 #### Results
+
 LeVit training loss for 20 epochs for Cifar-10 | LeVit training loss for 70 epochs for Cifar-10 '
 :-|-:
-![LeVit training loss for 20 epochs](imgs/cifar10-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/cifar10-Levit-train-loss-70epoch.png) 
+![LeVit training loss for 20 epochs](imgs/cifar10-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/cifar10-Levit-train-loss-70epoch.png)
+
 LeVit test accuracy for 20 epochs for Cifar-10 | LeVit test accuracy for 70 epochs for Cifar-10 '
 :-|-:
-![LeVit accuracy for 20 epochs](imgs/cifar10-Levit-test-acc.png)  | ![LeVit accuracy for 70 epochs](imgs/cifar10-Levit-test-acc-70epoch.png) 
+![LeVit accuracy for 20 epochs](imgs/cifar10-Levit-test-acc.png)  | ![LeVit accuracy for 70 epochs](imgs/cifar10-Levit-test-acc-70epoch.png)
+
 LeVit training loss for 20 epochs for STL10 | LeVit training loss for 70 epochs for STL10   '
 :-|-:
 ![LeVit training loss for 20 epochs](imgs/stl10-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/stl10-Levit-train-loss-70epoch.png) 
+
 LeVit test accuracy for 20 epochs for STL10 | LeVit test accuracy for 70 epochs for STL10   '
 :-|-:
 ![LeVit test accuracy for 20 epochs](imgs/stl10-Levit-test-acc.png)  | ![LeVit test accuracy for 70 epochs](imgs/stl10-Levit-test-acc-70epoch.png)
+
 LeVit training loss for 20 epochs for Caltech101 | LeVit training loss for 70 epochs for Caltech101 '
 :-|-:
 ![LeVit training loss for 20 epochs](imgs/caltech-Levit-trainingLoss.png)  | ![LeVit training loss for 70 epochs](imgs/caltech101-Levit-train-loss-70epoch.png)
+
 LeVit test accuracy for 20 epochs for Caltech101 | LeVit test accuracy for 70 epochs for Caltech101 '
 :-|-:
 ![LeVit test accuracy for 20 epochs](imgs/caltech-Levit-test-acc.png)  | ![LeVit test accuracy for 70 epochs](imgs/caltech101-Levit-test-acc-70epoch.png) 
+
 LeVit training loss for 20 epochs comparison between datasets | LeVit training loss for 70 epochs comparison between datasets '
 :-|-:
 ![LeVit training loss for 20 epochs](imgs/trainingLoss-bw-datasets-Levit256.png)  | ![LeVit training loss for 70 epochs](imgs/trainingLoss-bw-datasets-Levit384.png) 
+
 LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accuracy for 70 epochs comparison between datasets   '
 :-|-:
 ![LeVit test accuracy for 20 epochs](imgs/testAcc-bw-datasets-Levit256.png)  | ![LeVit test accuracy for 70 epochs](imgs/testAcc-bw-datasets-Levit384.png)
