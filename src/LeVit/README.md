@@ -21,7 +21,7 @@ The model values supported for levit are [levit_128, levit_128s, levit_192, levi
 
 The current datasets value supported are [CALTECH101, CIFAR10, STL10, IMAGENET]
 
-For adding more hyperparameters, please refer train.py .
+For adding more parameters to the above command, please refer train.py .
 
 
 
