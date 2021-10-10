@@ -32,7 +32,8 @@ Below we show results for training these models across the CIFAR-10, STL-10, and
 ### LeViT Implementation
 
 All levit model were trained on 1 gpu. 
-Refer the readme under src/levit/ for running Levit model. 
+
+Please refer the readme under src/levit/ for running Levit model. 
 
 #### Results
 
