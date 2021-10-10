@@ -30,7 +30,9 @@ LeVit paper utilises recent finding in attention-based architectures which are c
 Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets. 
 
 ### LeViT Implementation
-Refer the readme for Levit implementation. 
+
+All levit model were trained on 1 gpu. 
+Refer the readme under src/levit/ for running Levit model. 
 
 #### Results
 
@@ -68,7 +70,7 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 
 ## Table comparing various LeVit models (trained for 70 epochs)
 
-| Models | Train Loss | Test Loss | Train time(in min) | Test time(in min) | Test Acc@1 | Test Acc@5 |  
+| Models | Train Loss | Test Loss | Train time (in min) | Test time (in min) | Test Acc@1 | Test Acc@5 |  
 |---|---|---|---|---|---|---|
 |  LeVit-128 (Cifar-10) | 1.931 | 0.828 | 428.807 | 238.621 | 73.825 | 98.311 |
 |  LeVit-128s (Cifar-10) | 1.761 | 0.682 | 249.963 | 73.316 | 75.586 | 99.219 |
