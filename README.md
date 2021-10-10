@@ -101,3 +101,11 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 ## References
 
 [Pytorch image models](https://github.com/rwightman/pytorch-image-models)
+
+### Accuracy comparsion of vision transformers between datasets (trained till 20 epochs) 
+
+| Datasets/Model | DeiT | LeVit | ViT | PVT |
+| Cifar-10 |  | 70.57 |  |  |
+| Caltech-101 | 42.708 |  |  |
+| STL10 |  | 51.042 |  |  |
+
