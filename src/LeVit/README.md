@@ -17,9 +17,9 @@ To train a levit-256 on Cifar-10, locally distributed, 1 GPU, one process per GP
 
 `./distributed_train.sh 1 /data/cifar10/ --model levit_256 --sched cosine --epochs 10 --warmup-epochs 10 --lr 0.01 --reprob 0.1 --drop 0.0 --remode pixel --batch-size 256 --amp -j 1 --dataname CALTECH101 `
 
-model values for levit are [levit_128, levit_128s, levit_192, levit_256, levit_384]
+The model values supported for levit are [levit_128, levit_128s, levit_192, levit_256, levit_384]
 
-current datasets value supported are [CALTECH101, CIFAR10, STL10, IMAGENET]
+The current datasets value supported are [CALTECH101, CIFAR10, STL10, IMAGENET]
 
 For adding more hyperparameters, please refer train.py .
 
