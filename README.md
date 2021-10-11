@@ -109,7 +109,7 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 
 | Datasets/Model | DeiT | LeVit | ViT | PVT |
 |---|---|---|---|---|
-| Cifar-10 |  | 70.57 |  |  |
-| Caltech-101 |  | 42.708 |  |  |
-| STL10 |  | 51.042 |  |  |
+| Cifar-10 | 96.9 | 70.57 |  |  |
+| Caltech-101 | 84.79 | 42.708 |  |  |
+| STL10 | 96.16 | 51.042 |  |  |
 
