@@ -96,7 +96,7 @@ The Data-efficient image Transformers (DeiT) paper introduces improvements upon 
 ![DeiT Table](imgs/DeiTTable.png) 
 DeiT Performance | '
 :-|-:
-![DeiT Accuracy](imgs/DeiTLoss.png)  | ![DeiT Loss](imgs/DeiTLoss.png) 
+![DeiT Accuracy](imgs/DeiTAccuracy.png)  | ![DeiT Loss](imgs/DeiTLoss.png) 
 
 ![DeiT Model Accuracies](imgs/DeiTModelAccuraciesBar.png) 
 
