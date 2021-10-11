@@ -66,6 +66,22 @@ For the CIFAR-10 dataset the model preformed relatively well reaching a test acc
 
 Overall, Vision Transformer is able to achieve good scores for image classification, but is heavily dependent on large amounts of pre-training data, and large fine tuning datasets.
 
+### BeiT
+The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by proposing a self-supervised vision representation model BEiT, which stands for Bidirectional Encoder representation from Image Transformers. Following BERT developed in the natural language processing area, they propose a masked image modeling task to pretrain vision Transformers. 
+
+#### Results
+![DeiT Table](imgs/DeiTTable.png) 
+DeiT Performance | '
+:-|-:
+![DeiT Accuracy](imgs/DeiTLoss.png)  | ![DeiT Loss](imgs/DeiTLoss.png) 
+
+![DeiT Model Accuracies](imgs/DeiTModelAccuraciesBar.png) 
+
+
+## References
+
+[DeiT Repository (FB Research)](https://github.com/facebookresearch/deit)
+
 ### DeiT
 The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by leveraging knowledge distillation to reach high performance using a smaller dataset. In our experiments we compare performance between the DeiT models and their distilled counterparts to observe the importance of the knowledge distillation introduced in the paper. For all experiments we use the DeiT-tiny architecture (5-6M params) and train for 20 epochs on an NVIDIA 2060ti. Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets.
 
