@@ -73,7 +73,7 @@ The BEiT: BERT Pre-Training of Image Transformers paper introduces improvements 
 ![BeiT Table](imgs/testing_accuracy.png) 
 BeiT Training  | '
 :-|-:
-![DeiT Accuracy](imgs/training_loss.png)  | ![DeiT Loss](imgs/training_accuracy.png) 
+![DeiT Accuracy](imgs/loss_cross_entropy.png)  | ![DeiT Loss](imgs/training_accuracy.png) 
 
 
 ## References
