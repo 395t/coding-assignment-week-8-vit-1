@@ -38,6 +38,17 @@ We explore 4 different vision transformer architectures, fine tuning each on 3 d
 
 ### ViT
 
+![STL10 Accuracy](imgs/LOSS.png)
+
+![STL10 Accuracy](imgs/STL10_ACC.png)
+
+![Caltech101 Accuracy](imgs/CALTECH_ACC.png)
+
+![CIFAR10 Accuracy](imgs/CIFAR10_ACC.png)
+
+
+
+
 
 ### DeiT
 The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by leveraging knowledge distillation to reach high performance using a smaller dataset. In our experiments we compare performance between the DeiT models and their distilled counterparts to observe the importance of the knowledge distillation introduced in the paper. For all experiments we use the DeiT-tiny architecture (5-6M params) and train for 20 epochs on an NVIDIA 2060ti. Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets.
