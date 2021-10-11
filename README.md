@@ -34,21 +34,37 @@ This dataset consists of colour images of objects belonging to 101 classes.
 
 ## Experiments
 
-We explore 4 different vision transformer architectures, fine tuning each on 3 different datasets. We conduct analysis on each architecture independently and then compare at the the end.
+We explore 4 different vision transformer architectures, fine tuning each on 3 different datasets. We conduct analysis on each architecture independently and then compare at the end.
 
 ### ViT
+
+The Vision Transformer (ViT) paper introduced a Transformer architecture that can be used for image classification. In our experiments we use the pre-trained Vision Transformer from Hugging Face ([google/vit-base-patch16-224-in21k](https://huggingface.co/google/vit-base-patch16-224-in21k)). It has been pretrained on ImageNet-21K at resolution 224x224 and uses patches of resolution 16x16. All images used in training and testing were preprocessed to fit these dimensions. We fine-tuned the model on the 3 datasets listed above, results can be seen in the graphs and table below. The code is located in `notebooks/ViT.ipynb`, and is based off of [this](https://colab.research.google.com/drive/1Z1lbR_oTSaeodv9tTm11uEhOjhkUx1L4?usp=sharing#scrollTo=szWwJmqPHZ-r) Vision Transformer Tutorial.
+
+For Training Adam optimizer was used with a .0001 learning rate. A linear layer was also added to the last hidden state to classify the results into the specified number of classes per dataset.
 
 ![STL10 Accuracy](imgs/LOSS.png)
 
 ![STL10 Accuracy](imgs/STL10_ACC.png)
 
-![Caltech101 Accuracy](imgs/CALTECH_ACC.png)
+![Caltech101 Accuracy](imgs/Caltech101_ACC.png)
 
 ![CIFAR10 Accuracy](imgs/CIFAR10_ACC.png)
 
+| Datasets/Model | Test Accuracy | Loss | Train Time (20 epochs) | 
+|---|---|---|---|
+| STL10 | 53.46 | 1.002 | 00:26:40 | 
+| Caltech-101 | 21.95 | 0.109| 00:39:40 |
+| Cifar-10 | 80.43 | 0.074 | 4:26:00 |
 
+The model was able to reach convergence for Caltech101 and CIFAR-10, based on the trend of the loss when training STL-10 more epochs would be needed for complete convergence.
 
+For the STL-10 dataset the model was not able to get above 53.46 % test accuracy and 64.875 % training accuracy. This is most likely due to the size of the dataset. It was noted in the ViT paper that this model greatly underperforms with smaller dataset.
 
+For the Caltech101 dataset the model was not able to produce a very high test accuracy, only reaching 21.95 %. However, it reached a training accuracy of 97.338 %. This shows that the model very quickly overfitted the training data and reiterates that ViT does not perform well on small datasets. Also of note is that unlike STL-10 and CIFAR-10, Caltech101 is not a subset of image net, meaning it did not benefit as much from the pre-training, which is a possible explanation for why the test accuracy remained so low in comparison to STL-10, since the datasets are comparative in size.
+
+For the CIFAR-10 dataset the model preformed relatively well reaching a test accuracy of 80.43 %, and a training accuracy of 97.567 %. The model clearly performed better on this dataset, most likely due to the increased size of the training set. This can be seen both from the higher test accuracy and the lower training loss.
+
+Overall, Vision Transformer is able to achieve good scores for image classification, but is heavily dependent on large amounts of pre-training data, and large fine tuning datasets.
 
 ### DeiT
 The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by leveraging knowledge distillation to reach high performance using a smaller dataset. In our experiments we compare performance between the DeiT models and their distilled counterparts to observe the importance of the knowledge distillation introduced in the paper. For all experiments we use the DeiT-tiny architecture (5-6M params) and train for 20 epochs on an NVIDIA 2060ti. Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets.
@@ -151,6 +167,7 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 ## References
 
 [Pytorch image models](https://github.com/rwightman/pytorch-image-models)
+[Vision Transformer Tutorial](https://colab.research.google.com/drive/1Z1lbR_oTSaeodv9tTm11uEhOjhkUx1L4?usp=sharing#scrollTo=szWwJmqPHZ-r)
 
 ### Accuracy comparsion of vision transformers between datasets (trained till 20 epochs) 
 
