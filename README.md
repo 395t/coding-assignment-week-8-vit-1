@@ -66,8 +66,8 @@ For the CIFAR-10 dataset the model preformed relatively well reaching a test acc
 
 Overall, Vision Transformer is able to achieve good scores for image classification, but is heavily dependent on large amounts of pre-training data, and large fine tuning datasets.
 
-# BeiT
-The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by proposing a self-supervised vision representation model BEiT. Following the developments of BERT developed for NLP tasks, the authors propose a masked image modeling task to pretrain vision Transformers. Specifically, each image has two views in our pre-training, image patches of size 16x16 pixels, and visual tokens, which are discrete tokens. They first "tokenize" the original image into visual tokens. Then they randomly mask some image patches and fed them into the backbone Transformer. The pre-training objective is to recover the original visual tokens based on the corrupted image patches.
+# BEiT: BERT Pre-Training of Image Transformers
+The BEiT: BERT Pre-Training of Image Transformers paper introduces improvements upon the original Vision Transformer (ViT) architecture by proposing a self-supervised vision representation model BEiT. Following the developments of BERT developed for NLP tasks, the authors propose a masked image modeling task to pretrain vision Transformers. Specifically, each image has two views in our pre-training, image patches of size 16x16 pixels, and visual tokens, which are discrete tokens. They first "tokenize" the original image into visual tokens. Then they randomly mask some image patches and fed them into the backbone Transformer. The pre-training objective is to recover the original visual tokens based on the corrupted image patches.
 
 #### Results
 ![DeiT Table](imgs/DeiTTable.png) 
