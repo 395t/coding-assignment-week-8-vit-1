@@ -81,6 +81,9 @@ BeiT Training  | '
 | Caltech-101 | 24.0 | 21.95 |
 | Cifar-10 | 84.4 | 80.43 |
 
+### Analysis:
+
+Overall, BeiT has roughly the same performance as the ViT model described earlier (slightly better in overall test accuracy). During finetuning, the BeiT model struggled on the Caltech-101 dataset, as the dataset is quite small in size (observation made earlier as well). Additionally, the BeiT outperforms the baseline ViT model on the final test accuracy for all of the datasets. This is in line with the results that the paper published. The BeiT approach also depends on a large finetuning dataset and the signal wasn't enough on the Caltech-101 dataset.
 
 ## References
 
