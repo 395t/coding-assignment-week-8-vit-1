@@ -7,6 +7,8 @@ The implemetation is heavily based on [Pytorch image models](https://github.com/
 The major changes done is making the LeVit model flexible for training on any dataset. 
 Other small modifications were done to run the model locally. 
 
+The LeVit model was finetuned by changing various parameters like learning rate, dropout, warm restarts, batch size, etc.
+
 Steps to run the model are : 
 
 `git clone https://github.com/rwightman/pytorch-image-models.git`
@@ -22,6 +24,8 @@ The model values supported for levit are [levit_128, levit_128s, levit_192, levi
 The current datasets value supported are [CALTECH101, CIFAR10, STL10, IMAGENET]
 
 For adding more parameters to the above command, please refer train.py .
+
+
 
 
 
