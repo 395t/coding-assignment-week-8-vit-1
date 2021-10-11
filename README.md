@@ -75,11 +75,11 @@ BeiT Training  | '
 :-|-:
 ![DeiT Accuracy](imgs/loss_cross_entropy.png)  | ![DeiT Loss](imgs/training_accuracy.png) 
 
-| Datasets/Model | BeiT Final Test Accuracy |
+| Datasets/Model | BeiT Final Test Accuracy | ViT Final Test Accuracy
 |---|---|
-| STL10 | 57.15 | 
-| Caltech-101 | 24.0 | 
-| Cifar-10 | 84.4 |
+| STL10 | 57.15 | 53.46 | 
+| Caltech-101 | 24.0 | 21.95 |
+| Cifar-10 | 84.4 | 80.43 |
 
 
 ## References
