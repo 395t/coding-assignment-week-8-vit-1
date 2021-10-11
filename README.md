@@ -26,7 +26,7 @@ When performing the fine-tuning experiments in the paper, the authors fine-tuned
 
 
 ### LeViT
-LeVit paper utilises recent finding in attention-based architectures which are competitive on highly parallel processing hardware. LeVit outperforms existing convnets and vision transformers on the basis of speed/accuracy tradeoff. We finetuned LeVit for 20 epochs by changing various parameters like learning rate, dropout, warm restarts, batch size, etc for 20 epochs. We also trained LeVit for 70 epochs with the same parameters used for ImageNet without fine tuning. 
+LeVit paper utilises recent finding in attention-based architectures which are competitive on highly parallel processing hardware. LeVit outperforms existing convnets and vision transformers on the basis of speed/accuracy tradeoff. We finetuned LeVit by changing various parameters like learning rate, dropout, warm restarts, batch size, etc for 20 epochs. We also trained LeVit for 70 epochs with the same parameters used for ImageNet without fine tuning. 
 Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets. 
 
 ### LeViT Implementation
