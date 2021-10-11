@@ -1,6 +1,42 @@
 # Vision Transformers
 
-## Summary
+## Code structure
+
+All of our code can be found under the `notebooks` folder in our repository. 
+
+## Commands to Reproduce Experiments
+
+In order to run the notebooks we recommend the usage of Google Colab notebooks. 
+
+## Task
+
+The task that we are studying is using various vision transformers to do image classfication. 
+
+## Datasets
+
+We evaluate our approach on 3 publically avaliable datasets. 
+
+#### CIFAR-10
+
+This dataset contains 60k color images which are uniformly distributed accross 10 classes. The images are of size 4x32x32. 
+- Alex Krizhevsky. [Learning Multiple Layers of Features from Tiny Images](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf), 2009.
+
+#### STL-10
+
+This dataset contains 500 training images as well as one thousand testing images per class. Additionally, the dataset also contains 100k unlabeled images, which do not use for training, thus our model doesn't have state of the art performance.
+
+- Adam Coates, Honglak Lee, Andrew Y. Ng. [An Analysis of Single Layer Networks in Unsupervised Feature Learning AISTATS](https://cs.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf), 2011
+
+#### Caltech-101
+
+This dataset consists of colour images of objects belonging to 101 classes. 
+- Fei-Fei, Li, Rob Fergus, and Pietro Perona. "[One-shot learning of object categories.](http://vision.stanford.edu/documents/Fei-FeiFergusPerona2006.pdf)" IEEE transactions on pattern analysis and machine intelligence 28.4 (2006): 594-611.
+
+## Experiments
+
+We explore 4 different vision transformer architectures, fine tuning each on 3 different datasets. We conduct analysis on each architecture independently and then compare at the the end.
+
+### ViT
 
 
 ### DeiT
@@ -107,9 +143,9 @@ LeVit test accuracy for 20 epochs comparison between datasets | LeVit test accur
 
 ### Accuracy comparsion of vision transformers between datasets (trained till 20 epochs) 
 
-| Datasets/Model | DeiT | LeVit | ViT | PVT |
+| Datasets/Model | ViT | DeiT | LeVit | PVT |
 |---|---|---|---|---|
-| Cifar-10 | 96.9 | 70.57 |  |  |
-| Caltech-101 | 84.79 | 42.708 |  |  |
-| STL10 | 96.16 | 51.042 |  |  |
+| Cifar-10 | 80.43 | 96.9 | 70.57 |  | 
+| Caltech-101 | 21.95 | 84.79 | 42.708 |  | 
+| STL10 | 53.46 | 96.16 | 51.042 |  |  
 
