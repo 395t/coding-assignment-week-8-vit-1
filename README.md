@@ -36,7 +36,7 @@ This dataset consists of colour images of objects belonging to 101 classes.
 
 We explore 4 different vision transformer architectures, fine tuning each on 3 different datasets. We conduct analysis on each architecture independently and then compare at the end.
 
-### ViT
+# ViT
 
 The Vision Transformer (ViT) paper introduced a Transformer architecture that can be used for image classification. In our experiments we use the pre-trained Vision Transformer from Hugging Face ([google/vit-base-patch16-224-in21k](https://huggingface.co/google/vit-base-patch16-224-in21k)). It has been pretrained on ImageNet-21K at resolution 224x224 and uses patches of resolution 16x16. All images used in training and testing were preprocessed to fit these dimensions. We fine-tuned the model on the 3 datasets listed above, results can be seen in the graphs and table below. The code is located in `notebooks/ViT.ipynb`, and is based off of [this](https://colab.research.google.com/drive/1Z1lbR_oTSaeodv9tTm11uEhOjhkUx1L4?usp=sharing#scrollTo=szWwJmqPHZ-r) Vision Transformer Tutorial.
 
@@ -66,8 +66,8 @@ For the CIFAR-10 dataset the model preformed relatively well reaching a test acc
 
 Overall, Vision Transformer is able to achieve good scores for image classification, but is heavily dependent on large amounts of pre-training data, and large fine tuning datasets.
 
-### BeiT
-The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by proposing a self-supervised vision representation model BEiT, which stands for Bidirectional Encoder representation from Image Transformers. Following BERT developed in the natural language processing area, they propose a masked image modeling task to pretrain vision Transformers. 
+# BeiT
+The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by proposing a self-supervised vision representation model BEiT. Following the developments of BERT developed for NLP tasks, the authors propose a masked image modeling task to pretrain vision Transformers. Specifically, each image has two views in our pre-training, image patches of size 16x16 pixels, and visual tokens, which are discrete tokens. They first "tokenize" the original image into visual tokens. Then they randomly mask some image patches and fed them into the backbone Transformer. The pre-training objective is to recover the original visual tokens based on the corrupted image patches.
 
 #### Results
 ![DeiT Table](imgs/DeiTTable.png) 
@@ -82,7 +82,7 @@ DeiT Performance | '
 
 [DeiT Repository (FB Research)](https://github.com/facebookresearch/deit)
 
-### DeiT
+# DeiT
 The Data-efficient image Transformers (DeiT) paper introduces improvements upon the original Vision Transformer (ViT) architecture by leveraging knowledge distillation to reach high performance using a smaller dataset. In our experiments we compare performance between the DeiT models and their distilled counterparts to observe the importance of the knowledge distillation introduced in the paper. For all experiments we use the DeiT-tiny architecture (5-6M params) and train for 20 epochs on an NVIDIA 2060ti. Below we show results for training these models across the CIFAR-10, STL-10, and Caltech101 datasets.
 
 #### Results
